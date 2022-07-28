@@ -1,0 +1,122 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(
+		farthest-corner,
+		rgba(40, 40, 40, 1),
+		rgba(10, 10, 10, 1)
+	);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Style the navbar */
+#navbar {
+	overflow: hidden;
+	height: 80px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	box-shadow: 8px 8px 5px black;
+	-webkit-backdrop-filter: blur(20px) brightness(0.6);
+	backdrop-filter: blur(20px) brightness(0.6);
+	z-index: 10;
+}
+
+/* Navbar links */
+#navbar a {
+	float: center;
+	color: white;
+	padding: 25px 40px 0px 0px;
+	text-decoration: none;
+	font-family: monospace;
+	text-align: center;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/* Navbar cursor */
+#navbar a:hover {
+	text-shadow: 0px 0px 15px white;
+	transform: scale(1.15);
+	transition: 250ms ease-out;
+}
+
+/* Paint selected navbar item */
+#navbar a:active {
+	color: #b71c1c;
+}
+
+/* Page content */
+.content {
+	padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+}
+
+/*#######################################################################################################################################*/
+
+.box {
+	position: relative;
+}
+
+.input {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: none;
+	border: 3px solid #b71c1c;
+	border-radius: 25px;
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: inherit;
+	color: #b71c1c;
+	outline: none;
+	transition: 0.5s;
+}
+.box:hover input {
+	width: 250px;
+	background: transparent;
+	border-radius: 10px;
+}
+.box i {
+	position: absolute;
+	top: 50%;
+	bottom: 20px;
+	right: 15px;
+	transform: translate(-50%, -50%);
+	font-size: inherit;
+	color: transparent;
+	transition: 0.5s;
+}
+.box:hover i {
+	opacity: 0;
+	z-index: -1;
+}
+
+/*#######################################################################################################################################*/
+
+#face {
+    font-family: monospace;
+    font-size: 1500%;
+    color: white;
+    text-align: center;
+}

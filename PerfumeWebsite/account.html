@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume In Action</title>
+    <link rel="stylesheet" href="csss/account.css">
+</head>
+
+<body class="theme">
+
+    <div id="navbar">
+        <a href="perfume.html">Perfume</a>
+        <a href="make_up.html">Make Up</a>
+        <a href="self_care.html">Self Care</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="try_first.html">Try First</a>
+        <a href="brands.html">Brands</a>
+        <a href="home.html">Home</a>
+        <a id="account_link" href="#">Account</a>
+
+        <a class="box">
+            <form name="search">
+                <input id="search" , type="text" class="input" name="word" onkeypress="searchByWord();"
+                    onmouseout="this.value = ''; this.blur();">
+            </form>
+        </a>
+    </div>
+
+    <div id="sidebar">
+
+        <div class="informations">
+
+            <h1 class="header1" id="username">User Name</h1>
+
+            <div class="part">
+                <h2 class="header2">ID : </h2>
+                <h2 class="header2" id="ID"><i>...</i></h2>
+            </div>
+
+            <div class="part">
+                <h2 class="header2">Mail : </h2>
+                <h2 class="header2" id="mail">...</h2>
+            </div>
+
+            <div class="part">
+                <h2 class="header2">Phone : </h2>
+                <h2 class="header2" id="phone">...</h2>
+            </div>
+
+            <div class="part">
+                <h2 class="header2">Location : </h2>
+                <h2 class="header2" id="location">...</h2>
+            </div>
+
+            <div class="part">
+                <h2 class="header2">Password : </h2>
+                <h2 class="header2" id="password">...</h2>
+            </div>
+
+        </div>
+
+        <button id="button_log_out" class="button">Log Out</button>
+
+    </div>
+
+    <div class="table">
+        <h2 class="header2" id="favorites_header">Favorites</h2>
+        <table class="table" id="favorites"></table>
+    </div>
+
+    <div class="table">
+        <h2 class="header2" id="cart_header">Shopping Cart</h2>
+        <table class="table" id="shopping_cart"></table>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="jss/account.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+
+</html>

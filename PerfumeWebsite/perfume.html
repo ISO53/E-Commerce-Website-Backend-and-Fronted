@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume In Action</title>
+    <link rel="stylesheet" href="csss/perfume.css">
+</head>
+
+<body class="theme">
+
+    <div id="navbar">
+        <a href="#" onclick="listAll(); listBrands();">Perfume</a>
+        <a href="make_up.html">Make Up</a>
+        <a href="self_care.html">Self Care</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="try_first.html">Try First</a>
+        <a href="brands.html">Brands</a>
+        <a href="home.html">Home</a>
+        <a id="account_link" href="#">Account</a>
+
+        <a class="box">
+            <form name="search">
+                <input id="search" , type="text" class="input" name="word" onkeypress="searchByWord();"
+                    onmouseout="this.value = ''; this.blur();">
+            </form>
+        </a>
+    </div>
+
+    <div id="sidebar">
+        <li class="list" id="brand_list">Brand</li>
+
+        <li class="list" id="price_range">Price Range<br>
+            <input id="lower_price" type="text" class="input_filter">
+            <label>-</label>
+            <input id="upper_price" type="text" class="input_filter">
+        </li>
+
+        <li class="list" id="sort_by">Sort By
+            <br>
+            <input type="radio" class="radio" value="Price" name="sort_by" id="price">
+            <label class="label" for="Price">Price</label><br>
+            <input type="radio" class="radio" value="Discount" name="sort_by" id="discount">
+            <label class="label" for="Discount">Discount</label><br>
+            <input type="radio" class="radio" value="Last Update" name="sort_by" id="update_date" checked>
+            <label class="label" for="Last Update">Last Update</label><br>
+
+            <br>
+
+            <input class="checkbox" type="checkbox" id="is_ascending">
+            <label class="label" for="checkbox">Ascending Order</label><br>
+        </li>
+
+        <label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+
+        <button class="button" onclick="listByFilters();">Apply Filters</button>
+    </div>
+
+    <table id="table"></table>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="jss/perfume.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+
+</html>

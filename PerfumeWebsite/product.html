@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume In Action</title>
+    <link rel="stylesheet" href="csss/product.css">
+</head>
+
+<body class="theme">
+
+    <div id="navbar">
+        <a href="perfume.html">Perfume</a>
+        <a href="make_up.html">Make Up</a>
+        <a href="self_care.html">Self Care</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="try_first.html">Try First</a>
+        <a href="brands.html">Brands</a>
+        <a href="home.html">Home</a>
+        <a id="account_link" href="#">Account</a>
+
+        <a class="box">
+            <form name="search">
+                <input id="search" , type="text" class="input" name="word" onkeypress="searchByWord();"
+                    onmouseout="this.value = ''; this.blur();">
+            </form>
+        </a>
+    </div>
+
+    <div id="product_box">
+        <div id="left_product_box">
+            <img id="image">
+        </div>
+        <div id="right_product_box">
+            <div id="brand_name_area">
+                <h1 id="brand"></h1>
+                <h1 id="tre" style="font-family: monospace;"> - </h1>
+                <h1 id="name"></h1>
+            </div>
+            <div id="info_area">
+                <h2 id="info"></h2>
+                <h2 id="old_price"></h2>
+                <h2 id="new_price"></h2>
+            </div>
+            <div id="button_div">
+                <input class="button" type="button" value="Add to Cart">
+                <input class="button_fav" type="button" value="♥">
+            </div>
+        </div>
+    </div>
+
+    <div id="right_bar">
+        <table>
+            <tr>
+                <h2>Voting</h2>
+                <h3 id="stars" style="cursor: pointer;">★★★★★</h3>
+            </tr>
+            <br>
+            <tr>
+                <h2>Colors</h2><br>
+                <h3 id="colors" style="cursor: pointer;">🔴🔵🟢🟡🟠</h3>
+            </tr>
+            <br>
+            <tr>
+                <h2>Cargo Location</h2><br>
+                <br><input type="checkbox">
+                <label class="checkbox" for="checkbox">Turkey</label>
+                <br><input type="checkbox">
+                <label class="checkbox" for="checkbox">China</label>
+                <br><input type="checkbox">
+                <label class="checkbox" for="checkbox">USA</label>
+            </tr>
+        </table>
+    </div>
+
+    <div id="bottom_bar" style="overflow-y: hidden; overflow-x: scroll;">
+        <table id="bottom_table">
+            <tr id="bottom_line"></tr>
+        </table>
+    </div>
+
+    <div id="bottom_space"></div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="jss/product.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+
+</html>

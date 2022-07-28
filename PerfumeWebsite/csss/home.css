@@ -1,0 +1,123 @@
+body {
+    background: radial-gradient(farthest-corner, rgba(40, 40, 40, 1), rgba(10, 10, 10, 1));
+}
+
+/* Style the navbar */
+#navbar {
+	overflow: hidden;
+	height: 80px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	box-shadow: 8px 8px 5px black;
+	-webkit-backdrop-filter: blur(20px) brightness(0.6);
+	backdrop-filter: blur(20px) brightness(0.6);
+	z-index: 10;
+}
+
+/* Navbar links */
+#navbar a {
+	float: center;
+	color: white;
+	padding: 25px 40px 0px 0px;
+	text-decoration: none;
+	font-family: monospace;
+	text-align: center;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/* Navbar cursor */
+#navbar a:hover {
+	text-shadow: 0px 0px 15px white;
+	transform: scale(1.15);
+	transition: 250ms ease-out;
+}
+
+/* Page content */
+.content {
+	padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+}
+
+/*#######################################################################################################################################*/
+
+.img1 {
+	background-image: url("src/perfumeImages/perfume1.jpg");
+}
+.img2 {
+	background-image: url("src/perfumeImages/perfume2.jpg");
+}
+.img3 {
+	background-image: url("src/perfumeImages/perfume3.jpg");
+}
+.img4 {
+	background-image: url("src/perfumeImages/perfume4.jpg");
+}
+.img5 {
+	background-image: url("src/perfumeImages/perfume5.jpg");
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5 {
+	/* Arrange border */
+	border-top: 25px solid rgba(20,20,20,1);
+	border-bottom: 25px solid rgba(20,20,20,1);
+
+	/* Arrange size */
+	height: 750px;
+	width: 100%;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	float: left;
+	position: sticky;
+	width: 100%;
+}
+
+.image-text {
+	position: absolute;
+	bottom: 20%;
+	left: 20%;
+	right: 20%;
+	top: 20%;
+	font-size: 700%;
+	font-family: monospace;
+	font-weight: bold;
+
+	color: transparent;
+	-webkit-text-stroke: 2px white;
+
+	/* background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-color: red;
+	background-clip: text;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent; */
+}
+
+/*#######################################################################################################################################*/

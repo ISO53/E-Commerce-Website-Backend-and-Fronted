@@ -1,0 +1,303 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(
+		farthest-corner,
+		rgba(40, 40, 40, 1),
+		rgba(10, 10, 10, 1)
+	);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Style the navbar */
+#navbar {
+	overflow: hidden;
+	height: 80px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	box-shadow: 8px 8px 5px black;
+	-webkit-backdrop-filter: blur(20px) brightness(0.6);
+	backdrop-filter: blur(20px) brightness(0.6);
+	z-index: 10;
+}
+
+/* Navbar links */
+#navbar a {
+	float: center;
+	color: white;
+	padding: 25px 40px 0px 0px;
+	text-decoration: none;
+	font-family: monospace;
+	text-align: center;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/* Navbar cursor */
+#navbar a:hover {
+	text-shadow: 0px 0px 15px white;
+	transform: scale(1.15);
+	transition: 250ms ease-out;
+}
+
+/* Paint selected navbar item */
+#navbar a:active {
+	color: #b71c1c;
+}
+
+/* Page content */
+.content {
+	padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+}
+
+/*#######################################################################################################################################*/
+
+.box {
+	position: relative;
+}
+
+.input {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: none;
+	border: 3px solid #b71c1c;
+	border-radius: 25px;
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: inherit;
+	color: #b71c1c;
+	outline: none;
+	transition: 0.5s;
+}
+.box:hover input {
+	width: 250px;
+	background: transparent;
+	border-radius: 10px;
+}
+.box i {
+	position: absolute;
+	top: 50%;
+	bottom: 20px;
+	right: 15px;
+	transform: translate(-50%, -50%);
+	font-size: inherit;
+	color: transparent;
+	transition: 0.5s;
+}
+.box:hover i {
+	opacity: 0;
+	z-index: -1;
+}
+
+/*#######################################################################################################################################*/
+
+.button,
+.button_fav {
+	width: 91%;
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	cursor: pointer;
+	font-size: 18px;
+	transition: background-color 500ms, color 500ms;
+}
+
+.button_fav {
+	width: 7%;
+	color: #b71c1c;
+}
+
+.button:hover,
+.button_fav:hover {
+	background-color: #b71c1c;
+	color: black;
+}
+
+/*#######################################################################################################################################*/
+
+#product_box {
+	margin-top: 47%;
+	margin-right: 24%;
+	margin-left: 1%;
+	position: absolute;
+	width: 80%;
+	height: 70%;
+	box-shadow: 8px 8px 5px black;
+}
+
+#left_product_box {
+	height: 100%;
+	width: 50%;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+#right_product_box {
+	height: 100%;
+	width: 50%;
+	position: relative;
+	display: block;
+	float: right;
+}
+
+#image {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#brand_name_area h1 {
+	font-family: monospace;
+	display: inline-block;
+	color: white;
+}
+
+#info_area h2 {
+	font-family: monospace;
+	font-weight: normal;
+	color: rgba(175, 175, 175, 1);
+}
+
+#button_div {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	right: 0px;
+}
+
+#button,
+#button_fav {
+	display: block;
+}
+
+#old_price,
+#new_price {
+	display: block;
+	position: absolute;
+	bottom: 100px;
+	left: 40%;
+	right: 40%;
+	font-size: 20px;
+	display: block;
+}
+
+#new_price {
+	bottom: 50px;
+	font-size: 30px;
+	color: white;
+}
+
+#old_price {
+	text-decoration: line-through;
+}
+
+/*#######################################################################################################################################*/
+
+/* Style the right_bar */
+#right_bar {
+	overflow: hidden;
+	height: 70%;
+	font-size: 175%;
+	text-align: left;
+	margin: 7% 2% 0 82%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16%;
+	box-shadow: 8px 8px 5px black;
+}
+
+/* right_bar links */
+#right_bar h2 {
+	float: left;
+	display: block;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	font-family: monospace;
+	font-size: 100%;
+	margin: 5px;
+}
+
+#stars {
+	color: #b71c1c;
+	font-size: 170%;
+}
+
+.checkbox {
+	color: white;
+	font-family: monospace;
+	accent-color: #b71c1c;
+}
+
+/*#######################################################################################################################################*/
+
+#bottom_bar {
+	width: 96%;
+	height: 200px;
+	box-shadow: 8px 8px 5px black;
+	position: absolute;
+	bottom: -150px;
+	margin-bottom: 50px;
+	left: 2%;
+	right: 2%;
+	display: block;
+}
+
+.product_cell {
+	width: 200px;
+	height: 200px;
+	min-width: 200px;
+	min-height: 200px;
+	padding: 2px;
+	cursor: pointer;
+}
+
+#bottom_bar::-webkit-scrollbar {
+	display: none;
+}
+
+.bar_image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#bottom_space {
+	width: 96%;
+	height: 50px;
+	position: absolute;
+	bottom: -180px;
+	margin-bottom: 50px;
+	left: 2%;
+	right: 2%;
+	display: block;
+}

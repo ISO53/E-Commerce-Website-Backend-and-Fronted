@@ -1,0 +1,265 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(
+		farthest-corner,
+		rgba(40, 40, 40, 1),
+		rgba(10, 10, 10, 1)
+	);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Style the navbar */
+#navbar {
+	overflow: hidden;
+	height: 80px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	box-shadow: 8px 8px 5px black;
+	-webkit-backdrop-filter: blur(20px) brightness(0.6);
+	backdrop-filter: blur(20px) brightness(0.6);
+	z-index: 10;
+}
+
+/* Navbar links */
+#navbar a {
+	float: center;
+	color: white;
+	padding: 25px 40px 0px 0px;
+	text-decoration: none;
+	font-family: monospace;
+	text-align: center;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/* Navbar cursor */
+#navbar a:hover {
+	text-shadow: 0px 0px 15px white;
+	transform: scale(1.15);
+	transition: 250ms ease-out;
+}
+
+/* Paint selected navbar item */
+#navbar a:active {
+	color: #b71c1c;
+}
+
+/* Page content */
+.content {
+	padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+}
+
+#make_up {
+	color: red;
+}
+/*#######################################################################################################################################*/
+
+.box {
+	position: relative;
+}
+
+.input {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: none;
+	border: 3px solid #b71c1c;
+	border-radius: 25px;
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: inherit;
+	color: #b71c1c;
+	outline: none;
+	transition: 0.5s;
+}
+.box:hover input {
+	width: 250px;
+	background: transparent;
+	border-radius: 10px;
+}
+.box i {
+	position: absolute;
+	top: 50%;
+	bottom: 20px;
+	right: 15px;
+	transform: translate(-50%, -50%);
+	font-size: inherit;
+	color: transparent;
+	transition: 0.5s;
+}
+.box:hover i {
+	opacity: 0;
+	z-index: -1;
+}
+
+/*#######################################################################################################################################*/
+
+/* Style the sidebar */
+#sidebar {
+	overflow: hidden;
+	height: 83%;
+	font-size: 100%;
+	text-align: left;
+	margin: 5% 80% 0 2%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20%;
+	box-shadow: 8px 8px 5px black;
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+}
+
+/* Sidebar links */
+#sidebar li {
+	float: left;
+	display: block;
+	color: white;
+	text-align: left;
+	padding: 25px 40px 0px 0px;
+	text-decoration: none;
+	font-family: monospace;
+	text-align: left;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/*#######################################################################################################################################*/
+
+.informations {
+	display: block;
+	text-align: left;
+	padding-right: 5%;
+	padding-top: 2%;
+	font-family: monospace;
+	color: rgba(200, 200, 200, 1);
+}
+
+.part {
+	display: block;
+	text-align: left;
+}
+
+.header2 {
+	display: inline-block;
+	font-family: monospace;
+	color: rgba(200, 200, 200, 1);
+	text-shadow: 2px 2px black;
+}
+
+#username {
+	font-size: 50px;
+	color: #b71c1c;
+	text-shadow: 2px 2px black;
+}
+
+/*#######################################################################################################################################*/
+
+#button_log_out {
+	position: absolute;
+	bottom: 0;
+}
+
+.button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+
+	transition: background-color 500ms, color 500ms;
+}
+
+.button:hover {
+	background-color: #b71c1c;
+	color: black;
+}
+
+/*#######################################################################################################################################*/
+
+.table {
+	padding: 1% 0 0 7%;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+}
+
+#favorites_header, #cart_header {
+	padding-left: 7%;
+	font-size: 22px;
+}
+
+
+.row {
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+	display: block;
+
+	transition: transform 250ms;
+}
+
+.row:hover {
+	transform: scale(1.01);
+}
+
+.cell {
+	min-width: 175px;
+	max-width: 175px;
+	height: 50px;
+	font-family: monospace;
+	color: white;
+	font-size: 10px;
+	padding-left: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+
+	text-align: left;
+
+}
+
+.cellIn {
+	display: block;
+	max-width: 200px;
+	max-height: 75px;
+}
+
+#remove_button {
+	height: 50px;
+	width: 50px;
+}
+
+#button_cell {
+	height: 50px;
+	width: 50px;
+	padding-left: 15px;
+}
+
+.image {
+	height: 75px;
+}
