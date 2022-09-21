@@ -15,7 +15,7 @@ An online perfume sales site that uses springboot and postgresql on the backend 
  
  - Last Steps
    - Run the `perfume/src/main/java/PerfumeApplication.java` file.
-   - Open any .html file in the web file (preferably home.html).
+   - Open any .html file in the web folder (preferably home.html).
    - Enjoy!
   
 > *The server will run on localhost `port:8080` you can change this in application.properties file. Keep in mind that if you change this you need to change the ports in all javascript files.*
